@@ -1,4 +1,4 @@
-// Title.js
+// Title.jsx
 
 const Title = () => {
     return (
