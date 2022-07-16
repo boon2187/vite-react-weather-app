@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <Form />
+      <Form setCity={setCity} getWeather={getWeather} />
       <Results />
     </div>
   )
