@@ -12,6 +12,15 @@ function App() {
   // Formから持ってきた元「FormのデータをAPIに送るためにstateに取っておく」部分
   const [city ,setCity] =useState("");
 
+  // wetherapi.comからの結果を受け取る
+  const [results, setResults] = useState({
+    country: "",
+    cityName: "",
+    temperature: "",
+    conditionText: "",
+    icon: ""
+  });
+
   // Formから思ってきた元「axiosを使ってAPIに都市名を送る」部分
   const getWeather = (e) => {
       e.preventDefault();
