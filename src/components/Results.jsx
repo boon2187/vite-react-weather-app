@@ -1,6 +1,6 @@
 // Results.jsx
 
-const Results = () => {
+const Results = (props) => {
     return (
         <h1>気象データ</h1>
     );
