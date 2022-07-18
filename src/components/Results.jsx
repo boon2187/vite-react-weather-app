@@ -2,7 +2,12 @@
 
 const Results = (props) => {
     return (
-        <h1>気象データ</h1>
+        <div>
+            <h1>気象データ {props.results.country}</h1>
+            <p>{props.results.cityName}</p>
+            <p>{props.results.temperature}</p>
+        </div>
+
     );
 };
 
