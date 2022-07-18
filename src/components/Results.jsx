@@ -3,9 +3,15 @@
 const Results = (props) => {
     return (
         <div>
-            <h1>気象データ {props.results.country}</h1>
-            <p>{props.results.cityName}</p>
-            <p>{props.results.temperature}</p>
+            {props.results.country && <div>{props.results.country}</div>}
+            {props.results.cityName && <div>{props.results.cityName}</div>}
+            {props.results.temperature && <div>{props.results.temperature}<span>℃</span></div>}
+            {props.results.conditionText && 
+                <div>
+                    <img src={props.results.icon} alt="icon" />
+                    <span>{props.results.conditionText}</span>
+                </div>
+            }
         </div>
 
     );
