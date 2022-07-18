@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   // Formから持ってきた元「FormのデータをAPIに送るためにstateに取っておく」部分
-  const [city ,setCity] =useState("");
+  const [city ,setCity] =useState("Tokyo");
 
   // wetherapi.comからの結果を受け取る
   const [results, setResults] = useState({
@@ -24,7 +24,7 @@ function App() {
   // Formから思ってきた元「axiosを使ってAPIに都市名を送る」部分
   const getWeather = (e) => {
       e.preventDefault();
-      axios.get("https://api.weatherapi.com/v1/current.json?key=0be11468eae249b0b82234208221507&q=London&aqi=no").then(res => {
+      axios.get(`https://api.weatherapi.com/v1/current.json?key=0be11468eae249b0b82234208221507&q=${city}&aqi=no`).then(res => {
         setResults({
           country: res.data.location.country,
           cityName: res.data.location.name,
