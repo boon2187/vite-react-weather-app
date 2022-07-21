@@ -32,8 +32,7 @@ function App() {
           conditionText: res.data.current.condition.text,
           icon: res.data.current.condition.icon
         })
-      })
-
+      }).catch(err => alert("エラーが発生しました。ページをリロードして、もういぢとトライしてください。"));
   }
 
   return (
