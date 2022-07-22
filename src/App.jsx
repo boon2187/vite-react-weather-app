@@ -4,11 +4,15 @@ import axios from 'axios';
 import Title from './components/Title.jsx'
 import Form from './components/Form.jsx'
 import Results from './components/Results'
+import Loading from './components/Loading'
 
 import './App.css'
 
 
 function App() {
+  // データ取得中のstateを作っておく
+  const [loading, setLoading] = useState(false);
+
   // Formから持ってきた元「FormのデータをAPIに送るためにstateに取っておく」部分
   const [city ,setCity] =useState("");
 
