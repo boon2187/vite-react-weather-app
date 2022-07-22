@@ -50,6 +50,7 @@ function App() {
         <Title />
         <Form setCity={setCity} getWeather={getWeather} city={city} />
         <Results results={results}/>
+        {loading && <Loading />}
       </div>
     </div>
   )
