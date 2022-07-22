@@ -5,11 +5,11 @@ const Results = (props) => {
 
     return (
         <div>
-            {country && <div>{country}</div>}
-            {cityName && <div>{cityName}</div>}
-            {temperature && <div>{temperature}<span>℃</span></div>}
+            {country && <div className="results-country">{country}</div>}
+            {cityName && <div className="results-city">{cityName}</div>}
+            {temperature && <div className="results-temp">{temperature}<span>℃</span></div>}
             {conditionText && 
-                <div>
+                <div className="results-condition">
                     <img src={icon} alt="icon" />
                     <span>{conditionText}</span>
                 </div>

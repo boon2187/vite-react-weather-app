@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   // Formから持ってきた元「FormのデータをAPIに送るためにstateに取っておく」部分
-  const [city ,setCity] =useState("Tokyo");
+  const [city ,setCity] =useState("");
 
   // wetherapi.comからの結果を受け取る
   const [results, setResults] = useState({
@@ -31,7 +31,8 @@ function App() {
           temperature: res.data.current.temp_c,
           conditionText: res.data.current.condition.text,
           icon: res.data.current.condition.icon
-        })
+        });
+        setCity("");
       }).catch(err => alert("エラーが発生しました。ページをリロードして、もういぢとトライしてください。"));
   }
 
@@ -39,7 +40,7 @@ function App() {
     <div className="wrapper">
       <div className="container">
         <Title />
-        <Form setCity={setCity} getWeather={getWeather} />
+        <Form setCity={setCity} getWeather={getWeather} city={city} />
         <Results results={results}/>
       </div>
     </div>
